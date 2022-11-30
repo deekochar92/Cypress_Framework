@@ -1,0 +1,9 @@
+{
+  "blank_email_error": "Enter your email address.",
+  "invalid_email_error": "Enter a valid email address.",
+  "blank_name_error": "Please enter your name.",
+  "blank_password_error": "Enter your password.",
+  "t_n_c_unchecked_error": "Please agree with the Terms to sign up.",
+  "existing_email_error": "Sorry, this email is already registered",
+  "invalid_password_error": "Please use 8+ characters for secure password."
+}
