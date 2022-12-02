@@ -11,6 +11,18 @@ class SignUpPage {
     passwordError = '[data-testid="please-enter-your-password-1"]'
     invalidPasswordError = '#password-hint > #signup-form-password'
     termsError = '#termsError'
+    signUpLabel = ':nth-child(1) > .signup__title-form'
+    languageJA = '[data-testid="item-ja"] > .Box--803j5x > .link-text'
+    languageEN = '[data-testid="item-en"] > .Box--803j5x > .link-text'
+    languageIT = '[data-testid="item-it"] > .Box--803j5x > .link-text'
+    languageES = '[data-testid="item-es"] > .Box--803j5x > .link-text'
+    languageFR = '[data-testid="item-fr"] > .Box--803j5x > .link-text'
+    languageDE = '[data-testid="item-de"] > .Box--803j5x > .link-text'
+    languageNL = '[data-testid="item-nl"] > .Box--803j5x > .link-text'
+    languagePT = '[data-testid="item-pt"] > .Box--803j5x > .link-text'
+    languageButton = '.SwitcherCurrentLocale--72i0xo'
+    termsLink = 'form[method="post"] a:nth-child(1)'
+    privacyLink = 'form[method="post"] a:nth-child(2)'
 
 
     enterEmail(email) {
@@ -43,6 +55,14 @@ class SignUpPage {
         cy.get(this.termsCheckBox).click()
     }
 
+    clickTermsLink() {
+        cy.get(this.termsLink).invoke('removeAttr', 'target').click()
+    }
+
+    clickPrivacyLink() {
+        cy.get(this.privacyLink).invoke('removeAttr', 'target').click()
+    }
+
 
     registration(email, name, password) {
         this.enterEmail(email)
@@ -52,6 +72,19 @@ class SignUpPage {
         this.enterPassword(password)
         this.clickTermsCheckBox()
         this.submitPassword()
+    }
+
+    clickLanguageBtn() {
+        cy.get(this.languageButton).click()
+    }
+
+    selectLanguage(languageOption) {
+        cy.get(languageOption).click()
+    }
+
+    getSignUpText() {
+        let text = cy.get(this.signUpLabel).invoke('text')
+        return text
     }
 
 }
