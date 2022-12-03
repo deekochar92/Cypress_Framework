@@ -37,6 +37,18 @@ Cypress
 ├───Dockerfile
 └───package.json
 ```
+### 1. cypress/e2e/miro/pages:
+This folder/package has page classes containing locators of all the page elements that we need to interact with and their interactive methods. 
+
+### 2. cypress/e2e/miro/tests:
+This folder/package has the actual tests and their assertions.
+
+### 3. cypress/fixtures:
+This folder/package has json files to feed test data to the tests , for example errors.json has all the error messages that we need to validate.
+
+### 4. cypress/support:
+This folder/package has all the resuable methods/utilities to be used through out the project.
+
 ## Getting Started
 
 ### Prerequisites
