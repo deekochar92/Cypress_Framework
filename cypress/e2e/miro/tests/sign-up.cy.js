@@ -9,6 +9,7 @@ describe('Sign-Up Test Suite', () => {
   const signupPage = new SignUpPage()
 
   beforeEach(() => {
+
     cy.visit(Cypress.env('signup_url'))
   })
 
@@ -85,15 +86,13 @@ describe('Sign-Up Test Suite', () => {
     })
 
     it('TC-10 Verifies error for existing email', () => {
-      signupPage.enterEmail(Cypress.env('user_email'))
-      signupPage.enterName(faker.name.fullName())
-      signupPage.enterPassword(faker.internet.password())
+      signupPage.registration(Cypress.env('user_email'), faker.name.fullName(), faker.internet.password())
       cy.verifyErrorText(signupPage.emailError, error.existing_email_error)
     })
   })
 
   context('Localisation Cases', () => {
-    
+
     const Locales = [
       {
         name: 'Japanese',

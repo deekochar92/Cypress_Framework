@@ -1,7 +1,12 @@
 const { defineConfig } = require("cypress");
 module.exports = defineConfig({
-  pageLoadTimeout: 10000,
+  pageLoadTimeout: 100000,
   reporter: 'cypress-mochawesome-reporter',
+  blockHosts: ["*analytics.tiktok.com",
+    "*connect.facebook.net",
+    "*static.ads-twitter.com",
+    "www.googleadservices.com",
+    "www.googletagmanager.com"],
   reporterOptions: {
     charts: true,
     reportPageTitle: 'custom-title',

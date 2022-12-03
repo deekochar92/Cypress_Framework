@@ -26,7 +26,7 @@ class SignUpPage {
 
 
     enterEmail(email) {
-        cy.get(this.emailInput).type(email)
+        cy.get(this.emailInput).type(email, { force: true })
     }
 
     submitEmail() {
@@ -35,7 +35,7 @@ class SignUpPage {
     }
 
     enterName(name) {
-        cy.get(this.nameInput).type(name)
+        cy.get(this.nameInput).type(name, { force: true })
     }
 
     submitName() {
@@ -44,7 +44,7 @@ class SignUpPage {
     }
 
     enterPassword(password) {
-        cy.get(this.passwordInput).type(password)
+        cy.get(this.passwordInput).type(password, { force: true })
     }
 
     submitPassword() {
