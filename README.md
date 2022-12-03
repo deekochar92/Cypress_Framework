@@ -44,7 +44,7 @@ NodeJS
 ### Installation
 1. Clone the repo
 ```
-https://github.com/deekochar92/miro_assignment.git
+git clone https://github.com/deekochar92/miro_assignment.git
 ```
 2. Install NPM packages
 ```
