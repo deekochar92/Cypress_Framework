@@ -3,6 +3,11 @@
 
 Automated tests for miro signup page.
 
+## Built With
+Javascript
+
+Cypress
+
 ## Documentation
 
 [Requirements](https://drive.google.com/file/d/1iEXIm_0R3X4lxNCD8uIGOqQK6P7_Dbrz/view?usp=share_link)
